@@ -37,6 +37,7 @@ public class Asteroid : MonoBehaviour
         {
             if (coll.gameObject.tag=="Kursun")
             {
+                GameObject.FindGameObjectWithTag("Audio").GetComponent<SesKontrol>().AsteroidPatlama();
                 oyunKonqtrol.AsteroidYokOldu(gameObject);
                  AsteroidYokEt();
                 
@@ -46,9 +47,9 @@ public class Asteroid : MonoBehaviour
         
         public void AsteroidYokEt()
         {
-        oyunKonqtrol.AsteroidYokOldu(gameObject);
-        Instantiate(patlamaPrefab, gameObject.transform.position, Quaternion.identity);
-         Destroy(gameObject);
+            GameObject patlama = Instantiate(patlamaPrefab, gameObject.transform.position, Quaternion.identity);
+            Destroy(patlama, 2f);
+            Destroy(gameObject);
          }
 
 

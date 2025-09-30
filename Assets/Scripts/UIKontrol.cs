@@ -28,9 +28,11 @@ public class UIKontrol : MonoBehaviour
     }
     public void OyunBasladi()
     {
+        puan=0;
         oyunAdiText.gameObject.SetActive(false);
         oynaButon.gameObject.SetActive(false);
         puanText.gameObject.SetActive(true);
+        oyunBittiText.gameObject.SetActive(false);
 
         
 

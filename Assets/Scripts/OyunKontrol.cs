@@ -67,6 +67,12 @@ public class OyunKontrol : MonoBehaviour
     }
     public void OyunuBitir()
     {
+        
+
+
+
+
+        
         for(int i = asteroidList.Count - 1; i >= 0; i--)
         {
             asteroidList[i].GetComponent<Asteroid>().AsteroidYokEt();
@@ -79,6 +85,7 @@ public class OyunKontrol : MonoBehaviour
         uikontrol.OyunBitti();
 
     }
+   
 
     
 }

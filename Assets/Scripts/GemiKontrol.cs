@@ -57,8 +57,9 @@ public class GemiKontrol : MonoBehaviour
         {
             Vector2 kursunPozisyon=gameObject.transform.position;
             kursunPozisyon.y += 1;
+            GameObject.FindGameObjectWithTag("Audio").GetComponent<SesKontrol>().Ates();
             Instantiate(kursunPrefab,kursunPozisyon,Quaternion.identity);
-
+            
         }
 
     }
@@ -66,6 +67,7 @@ public class GemiKontrol : MonoBehaviour
     {
         if (collision.gameObject.tag == "Asteroid")
         {
+            GameObject.FindGameObjectWithTag("Audio").GetComponent<SesKontrol>().GemiPatlama();
             oyunKontrol.OyunuBitir();
 
             Instantiate(patlamaPrefab,gameObject.transform.position, Quaternion.identity);

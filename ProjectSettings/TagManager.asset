@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Gemi
+  - Asteroid
+  - Kursun
+  - Audio
   layers:
   - Default
   - TransparentFX
